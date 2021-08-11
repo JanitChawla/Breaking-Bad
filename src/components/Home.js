@@ -50,7 +50,9 @@ const Home = (props)=> {
         const indexOfFirst = indexOfLast - perPage;
         const characters = allCharacters.slice(indexOfFirst, indexOfLast);
 
-        let renderCharacters = characters.map((character) => (
+        //pagination logic not working on netlify but working locally
+        // let renderCharacters = characters.map((character) => (
+        let renderCharacters = allCharacters.map((character) => (
             <tr key={character.char_id}>
                 <td>{character.name}</td>
                 <td>{character.occupation[0]}</td>
