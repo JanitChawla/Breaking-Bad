@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -158,7 +158,7 @@ const Home = (props)=> {
     }
 
         return (
-            <Fragment style={{backgroundColor: 'black'}}>
+            <div style={{backgroundColor: 'black'}} >
                 <Search query={(q)=> setCharacter(q)} />
                 <div style={{marginBottom: '40px'}}>
                     {filter}
@@ -182,7 +182,7 @@ const Home = (props)=> {
                         {renderPageNumbers}
                     </div>
                 </div>
-            </Fragment>
+            </div>
         )
 }
 
