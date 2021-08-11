@@ -76,14 +76,14 @@ const Home = (props)=> {
 
         const renderPageNumbers = pageNumbers.map(number => {
             return (
-                <li
+                <button
                     key={number}
                     id={number}
                     onClick={handlePages}
                     className="page-item page-link"
                 >
                     {number}
-                </li>
+                </button>
             );
         });
 
@@ -176,9 +176,9 @@ const Home = (props)=> {
                             {renderCharacters}
                         </tbody>
                     </table>
-                    <ul id="page-numbers" className="pagination justify-content-center">
+                    <div id="page-numbers" className="pagination justify-content-center">
                         {renderPageNumbers}
-                    </ul>
+                    </div>
                 </div>
             </Fragment>
         )
